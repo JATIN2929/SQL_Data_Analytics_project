@@ -65,7 +65,7 @@ customer_key,
 CASE 
     WHEN lifespan >= 12 AND total_spending <= 5000 THEN 'Regular'
     WHEN lifespan >= 12 AND total_spending >  5000 THEN 'VIP'
-    WHEN lifespan < 12 THEN 'New'
+    ELSE 'New'
 END customer_segmentation
 FROM customer_spending
 )t 
